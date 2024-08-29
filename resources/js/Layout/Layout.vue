@@ -1,14 +1,19 @@
 
 <script setup>
-    import SideBar from '../Components/Sidebar.vue'
+    import Sidebar from '../Components/Sidebar.vue';
 </script>
 
 
 <template>
+
+    <Head>
+        <link rel="icon" href="/img/budgetbuddy_logo.jpg" type="image/x-icon">
+    </Head>
+
     <div>
-        <SideBar />
-        <div class="container">
+        <Sidebar />
+        <main class="p-4">
             <slot />
-        </div>
+        </main>
     </div>
 </template>
