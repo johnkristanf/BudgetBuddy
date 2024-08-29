@@ -3,6 +3,14 @@
 use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
-Route::inertia('/', 'Auth/Login')->name('login.page');
-Route::inertia('/dashboard', 'Dashboard')->name('dashboard');
-Route::inertia('/transactions', 'Transactions')->name('transactions');
+Route::middleware('guest')->group(function () {
+    Route::inertia('/auth/login', 'Auth/Login')->name('login');
+    Route::post('/login', [AuthController::class, 'login']);
+});
+
+
+Route::middleware('auth')->group(function () {
+    Route::inertia('/dashboard', 'Dashboard')->name('dashboard');
+    Route::inertia('/transactions', 'Transactions')->name('transactions');
+    
+});
