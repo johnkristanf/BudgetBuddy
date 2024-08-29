@@ -10,10 +10,11 @@
     <div class="flex flex-col">
         <Link 
             v-for="link in links"
+            :key="link.route"
             :href="route(link.route)"
             :class="{'bg-red-800': $page.component == link.component}"
             >
-                Dashboard
+               {{ link.component }}
         </Link>
     </div>
 </template>
