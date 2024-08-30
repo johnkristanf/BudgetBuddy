@@ -7,9 +7,9 @@ import { ZiggyVue } from '../../vendor/tightenco/ziggy';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
-import { faGauge, faMoneyBill, faGear } from '@fortawesome/free-solid-svg-icons';
+import { faGauge, faMoneyBill, faGear, faRightFromBracket, faFaceSmile } from '@fortawesome/free-solid-svg-icons';
 
-library.add(faGauge, faMoneyBill, faGear);
+library.add(faGauge, faMoneyBill, faGear, faRightFromBracket, faFaceSmile);
 
 
 import Layout from './Layout/Layout.vue';
