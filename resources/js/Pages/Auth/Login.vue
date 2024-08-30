@@ -1,6 +1,6 @@
 <script setup>
     import { useForm } from '@inertiajs/vue3';
-import logo from '../../../../public/img/budgetbuddy_logo.jpg';
+    import logo from '../../../../public/img/budgetbuddy_logo.jpg';
     import TextInput from '../../Components/TextInput.vue';
 
 
@@ -24,6 +24,12 @@ import logo from '../../../../public/img/budgetbuddy_logo.jpg';
             onSuccess: () => formData.reset(),
             onError: () => formData.reset('password'),
         })
+    }
+
+
+    const inputTestAccount = () => {
+        formData.email = 'johnkristan01@gmail.com';
+        formData.password = 'johntorremocha'
     }
 
 
@@ -87,6 +93,15 @@ import logo from '../../../../public/img/budgetbuddy_logo.jpg';
                             <button type="submit" class="w-full text-white bg-blue-600 hover:opacity-75 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Sign in</button>
                             
                         </form>
+
+                        <button 
+                            type="button" 
+                            @click="inputTestAccount"
+                            class="w-full text-white bg-black hover:opacity-75 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                            >
+                            Test Account
+                        </button>
+
                     </div>
                 </div>
             </div>
