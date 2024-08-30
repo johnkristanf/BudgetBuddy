@@ -16,5 +16,7 @@ Route::middleware('auth')->group(function () {
     Route::inertia('/transactions', 'Transactions')->name('transactions');
     Route::inertia('/settings', 'Settings')->name('settings');
     Route::inertia('/notifications', 'Notifications')->name('notifications');
+
+    Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
     
 });
