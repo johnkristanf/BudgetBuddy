@@ -17,10 +17,12 @@
         "@fortawesome/fontawesome-svg-core": "^6.6.0",
         "@fortawesome/free-brands-svg-icons": "^6.6.0",
         "@fortawesome/free-regular-svg-icons": "^6.6.0",
-        "@fortawesome/free-solid-svg-icons": "^6.6.0",
+         "@fortawesome/free-solid-svg-icons": "^6.6.0",
         "@fortawesome/vue-fontawesome": "^3.0.8",
         "@inertiajs/vue3": "^1.2.0",
         "@vitejs/plugin-vue": "^5.1.2",
-        "vue": "^3.4.38"
+        "chart.js": "^4.4.4",
+        "vue": "^3.4.38",
+        "vue-chartjs": "^5.3.1"
     }
 }
