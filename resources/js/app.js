@@ -4,6 +4,14 @@ import { createApp, h } from 'vue';
 import { createInertiaApp, Head, Link} from '@inertiajs/vue3';
 import { ZiggyVue } from '../../vendor/tightenco/ziggy';
 
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+
+import { faGauge, faMoneyBill, faGear } from '@fortawesome/free-solid-svg-icons';
+
+library.add(faGauge, faMoneyBill, faGear);
+
+
 import Layout from './Layout/Layout.vue';
 
 createInertiaApp({
@@ -26,6 +34,7 @@ createInertiaApp({
     createApp({ render: () => h(App, props) })
       .use(plugin)
       .use(ZiggyVue)
+      .component('font-awesome-icon', FontAwesomeIcon)
       .component('Head', Head)
       .component('Link', Link)
       .mount(el)
